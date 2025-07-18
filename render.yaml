@@ -7,5 +7,5 @@ services:
     buildCommand: "./mvnw clean package -DskipTests"
     startCommand: "java -jar target/*.jar"
     envVars:
-      - key: frontend.url
+      - key: FRONTEND_URL
         value: https://urlinklytics.netlify.app/
