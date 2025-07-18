@@ -1,8 +1,11 @@
 services:
   - type: web
     name: url-shortener-backend
-    buildCommand: "./mvnw clean package -DskipTests"
-    startCommand: "java -jar target/*.jar"
     repo: https://github.com/Pratikweb22/url-shortener
     branch: main
     rootDir: .
+    buildCommand: "./mvnw clean package -DskipTests"
+    startCommand: "java -jar target/*.jar"
+    envVars:
+      - key: frontend.url
+        value: https://urlinklytics.netlify.app/
