@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: url-shortener-backend
+    env: java
+    buildCommand: "./mvnw clean package -DskipTests"
+    startCommand: "java -jar target/*.jar"
+    repo: https://github.com/Pratikweb22/url-shortener
+    branch: main
+    rootDir: .
